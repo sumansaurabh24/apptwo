@@ -31,7 +31,7 @@ script:
   - ./mvnw -ntp clean verify
   - ./mvnw -ntp verify -Pprod -DskipTests jib:dockerBuild
   - docker images
-  - docker image tag appone sumansaurabh/apptwo
+  - docker image tag apptwo sumansaurabh/apptwo
   - docker push sumansaurabh/apptwo
 notifications:
   webhooks:
